@@ -2,7 +2,7 @@
 # VulnScan CLI
 
 ## 🔍 Overview
-VulnScan CLI is a simple Python tool that wraps around Nmap to perform scans for:
+VulnScan CLI is a simple Python tool that uses Nmap to perform scans for:
 - Open ports
 - Service version detection
 - Basic vulnerability detection (optional)
@@ -11,11 +11,12 @@ VulnScan CLI is a simple Python tool that wraps around Nmap to perform scans for
 - Accept target IP/domain from the command line
 - Scan a range or list of ports
 - Save results in JSON format
-- Optional vulnerability scan using Nmap's `vuln` script
+- A vulnerability scan using Nmap's `vuln` script
 
 ## 💻 Usage
 ```bash
 python main.py --target 192.168.1.1 --ports 22,80 --vuln --output result.json
+python main.py --target scanme.nmap.org --ports 22,80 --vuln --output results.json
 ```
 
 ## 📦 Requirements
@@ -28,4 +29,4 @@ pip install -r requirements.txt
 ```
 
 ## 📁 Output
-Results are saved to `scan_output.json` in JSON format with basic info.
+Results are saved in JSON format with basic info.
